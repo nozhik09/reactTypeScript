@@ -1,0 +1,14 @@
+.counetr-component {
+display: flex;
+gap: 20px;
+align-items: center;
+width: 300px;
+padding: 20px;
+background: rgb(74, 74, 77);
+
+}
+
+.counetr-result {
+font-size: 24px;
+
+}
