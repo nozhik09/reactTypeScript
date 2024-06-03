@@ -1,0 +1,20 @@
+.animal_card_wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+background: rgb(181, 240, 18);
+border-radius: 8px;
+width: 300px;
+min-height: 300px;
+padding: 20px;
+
+}
+
+
+.animal_card_wrapper > img {
+width: 100px;
+height: 100px;
+
+
+}

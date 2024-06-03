@@ -1,0 +1,11 @@
+.feedback_container {
+
+display: flex;
+flex-direction: column;
+gap: 30px;
+width: 800px;
+padding: 30px;
+background: gray;
+
+
+}

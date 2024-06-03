@@ -1,0 +1,8 @@
+.lesson07_components {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 30px;
+}
