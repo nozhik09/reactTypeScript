@@ -83,7 +83,7 @@ function Lesson_07() {
     return (<div className='lesson07_components'>
         <p style={{fontSize: '24px', color: '#954bf2'}}>Inline style example</p>
         <div style={borderObj}>Start</div>
-        <Counter count={count} onMinusClick={onMinusClick} onPlusClick={onPlusClick}/>
+        <Counter count={count} onMinus={onMinusClick} onPlus={onPlusClick}/>
         <div style={borderObj}>End</div>
     </div>)
 

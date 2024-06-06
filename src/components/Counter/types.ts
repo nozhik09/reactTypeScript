@@ -1,9 +1,7 @@
 export interface CounterProps {
-    count:number,
-    onMinusClick:()=>void,
-    onPlusClick:()=>void
-
-
-
-
+    count: number,
+    onMinus: () => void,
+    onPlus: () => void,
+    disabledMinus?: boolean,
+    disabledPlus?: boolean
 }

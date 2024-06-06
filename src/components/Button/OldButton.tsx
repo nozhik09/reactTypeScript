@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles";
 function Button({name='Get', isPrimary = true}) {
   // для вариантов 1-3
   // const sendButton = "Send";

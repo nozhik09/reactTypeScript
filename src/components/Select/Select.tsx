@@ -1,23 +1,23 @@
-import './styles.css'
+import { SelectComponent, SelectElement, Label } from './styles'
 import { SelectProps } from './types'
 
 function Select({ idSelect, name, labelName, children }: SelectProps) {
     // console.log(idSelect);
 
     return (
-        <div className="select-element">
+        <SelectElement>
             {labelName ? (
-                <label htmlFor={idSelect} className="label">
+                <Label htmlFor={idSelect}>
                     {labelName}
-                </label>
+                </Label>
             ) : (
                 null
             )}
 
-            <select id={idSelect} name={name} className="select">
+            <SelectComponent id={idSelect} name={name}>
                 {children}
-            </select>
-        </div>
+            </SelectComponent>
+        </SelectElement>
     )
 }
 
