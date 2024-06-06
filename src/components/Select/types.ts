@@ -1,8 +1,8 @@
-import {ReactNode} from "react";
+import { ReactElement, ReactNode } from "react";
 
 export interface SelectProps {
-    idSelect?:string,
-    name:string,
+    idSelect?: string,
+    name: string,
     labelName?: string,
-    children:ReactNode
+    children: ReactNode
 }
