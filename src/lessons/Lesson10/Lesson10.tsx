@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {Lesson10Components, Fact, FactItem , Loader} from "./styles";
 import Button from "../../components/Button/Button";
+import {v4} from "uuid";
 
 function Lesson10() {
     const [inputFacts, setInputFacts] = useState<string[]>([]);
@@ -12,9 +13,12 @@ function Lesson10() {
             const result = await response.json();
             if (!response.ok) {
                 throw Object.assign(new Error('API error'), {error: result})
+            }else {
+                setInputFacts((cats) => [...cats, result.fact]);
+
             }
 
-            setInputFacts((cats) => [...cats, result.fact]);
+
             setShowFactBlock(true);
         } catch (error) {
             console.log('Error')
@@ -36,15 +40,20 @@ function Lesson10() {
         setShowFactBlock(false);
     };
 
+    const catFacts = inputFacts.map((fact)=>{
+        return <FactItem key={v4()}>{fact}</FactItem>
+
+
+
+    })
+
     return (
         <Lesson10Components>
             <Button name="GET MORE INFO" onClick={GetMore}/>
 
             {showFactBlock && (
                 <Fact>
-                    {inputFacts.map((fact, id) => (
-                        <FactItem key={id}>{fact}</FactItem>
-                    ))}
+                    {catFacts}
                 </Fact>
             )}
             <Button name="DELETE ALL DATA" onClick={DeleteAllFact} disabled={!showFactBlock}/>
