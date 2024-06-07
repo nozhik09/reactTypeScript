@@ -6,7 +6,7 @@ function Lesson10() {
     const [inputFacts, setInputFacts] = useState<string[]>([]);
     const [showFactBlock, setShowFactBlock] = useState(false);
 
-    const getFacts = async () => {
+    const getCatFacts = async () => {
         try {
             const response = await fetch("https://catfact.ninja/fact");
             const result = await response.json();
@@ -18,15 +18,17 @@ function Lesson10() {
             setShowFactBlock(true);
         } catch (error) {
             console.log('Error')
+        } finally {
+            <Loader/>
         }
     };
 
     useEffect(() => {
-        getFacts();
+        getCatFacts();
     }, []);
 
     const GetMore = () => {
-        getFacts();
+        getCatFacts();
     };
 
     const DeleteAllFact = () => {
@@ -40,8 +42,8 @@ function Lesson10() {
 
             {showFactBlock && (
                 <Fact>
-                    {inputFacts.map((fact, index) => (
-                        <FactItem key={index}>{fact}</FactItem>
+                    {inputFacts.map((fact, id) => (
+                        <FactItem key={id}>{fact}</FactItem>
                     ))}
                 </Fact>
             )}

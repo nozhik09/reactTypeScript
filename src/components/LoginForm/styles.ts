@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const LoginFormWrapper = styled.div`
+export const LoginFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   gap: 30px;
