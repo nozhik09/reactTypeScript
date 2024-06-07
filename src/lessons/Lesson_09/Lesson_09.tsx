@@ -8,9 +8,7 @@ function Lesson09() {
     const [inputValue, setInputValue] = useState<string>('');
     const [inputValue2, setInputValue2] = useState<string>('');
 const [dogImageUrl, setDogImageUrl] = useState<string>(``)
-    console.log('Lesson09 update')
-    const example = 23
-    console.log(example)
+
 
 
     const getDogPhoto = async () => {
