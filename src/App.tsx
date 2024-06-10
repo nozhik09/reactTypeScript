@@ -5,6 +5,12 @@ import Layaout from "./components/Layout/Layaout";
 import Home from "./pages/Home/Home";
 import User from "./pages/User/User";
 import About from "./pages/About/About";
+import Clients from "./pages/Clients/Clients";
+import Cargill from "./pages/Clients/Cargill/Cargill";
+import Cofco from "./pages/Clients/Cofco/Cofco";
+import Nibulon from "./pages/Clients/Nibulon/Nibulon";
+import React from "react";
+import Lesson13 from "./lessons/Lesson13/Lesson13";
 
 
 // import HomeWork09 from "./homeworks/HomeWork09/HomeWork09";
@@ -33,16 +39,23 @@ function App() {
             {/*  <Lesson10/>*/}
             {/*  <Lesson_11/>*/}
             {/*  <HomeWork11/>*/}
-            <Layaout>
-                <Routes>
-                    <Route path='/' element={<Home/>}/>
-                    <Route path='/user' element={<User/>}/>
-                    <Route path='/about' element={<About/>}/>
-                    <Route path='*' element={'Page not found'}></Route>
+            {/*<Layaout>*/}
+            {/*    <Routes>*/}
+            {/*        <Route path='/' element={<Home/>}/>*/}
+            {/*        <Route path='/user' element={<User/>}/>*/}
+            {/*        <Route path='/about' element={<About/>}/>*/}
+            {/*        <Route path='/clients' element={<Clients/>}/>*/}
+            {/*        <Route path='/clients/nibulon' element={<Nibulon/>}/>*/}
+            {/*        <Route path='/clients/cofco' element={<Cofco/>}/>*/}
+            {/*        <Route path='/clients/cargill' element={<Cargill/>}/>*/}
+            {/*        <Route path='*' element={'Page not found'}/>*/}
 
-                </Routes>
 
-            </Layaout>
+            {/*    </Routes>*/}
+
+            {/*</Layaout>*/}
+
+            <Lesson13/>
 
         </BrowserRouter>
     );
